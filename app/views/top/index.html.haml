@@ -1,0 +1,23 @@
+.header
+  =link_to "https://www.pairs.lv/", class:"logo" do
+    =image_tag "https://www.pairs.lv/wp-content/themes/pairs_pc/img/logo_pairs.png",class:"logo-image"
+  .user
+    .user__login
+      =link_to "#" do
+        ログイン
+    .user__sin-up
+      =link_to "#" do
+        新規登録
+
+.main        
+  .main-box
+    .main-box__left
+      = image_tag "https://www.pairs.lv/wp-content/themes/pairs_pc/img/No1.png?20201030103557", class:"main-box__left--image"
+      %P.main-box__left--message
+        今すぐ簡単登録!
+      .main-box__left--apple
+        -# =iamge_tag "http://www.w3.org/2000/svg"
+      .main-box__left--google
+        -# =iamge_tag "static/images/badges/ja_badge_web_generic.png"
+    .main-box__right
+      = image_tag "https://www.pairs.lv/wp-content/themes/pairs_pc/img/MV.jpg?20201030103557", class:"main-box__right--image"
