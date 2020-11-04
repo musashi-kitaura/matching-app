@@ -1,0 +1,35 @@
+a{
+  text-decoration: none;
+}
+.header{
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  padding: 24px 0;
+  .logo-image{
+    width: 87px;
+    height: 29px;
+    margin-left: 30%;
+  }
+  .user{
+    float: left;
+    padding-right: 20px;
+    margin-left: 70%;
+    &__login,&__sin-up{
+      width: 154px;
+      border-radius: 17px;
+      border: 1px solid #00c4cc;
+      font-size: 13px;
+      line-height: 18px;
+      text-align: center;
+      padding: 9px 16px;
+      margin-bottom: unset;
+      display: unset;
+      margin-left: 32px;
+      
+      a{
+       color: #00c4cc;
+      }
+    }
+  }
+}
