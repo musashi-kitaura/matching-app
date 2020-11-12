@@ -5,7 +5,7 @@ a{
   width: 100%;
   background-color: #fff;
   display: flex;
-  padding: 24px 0;
+  padding: 10px 0;
   .logo-image{
     width: 87px;
     height: 29px;
@@ -14,12 +14,12 @@ a{
   .user{
     float: left;
     padding-right: 20px;
-    margin-left: 70%;
+    margin-left: 65%;
     &__login,&__sin-up{
       width: 154px;
       border-radius: 17px;
-      border: 1px solid #00c4cc;
-      font-size: 13px;
+      border: 1px solid blue;
+      font-size: 14px;
       line-height: 18px;
       text-align: center;
       padding: 9px 16px;
@@ -28,8 +28,76 @@ a{
       margin-left: 32px;
       
       a{
-       color: #00c4cc;
+       color: blue;
       }
     }
   }
 }
+.menu{
+  width: 100%;
+  &__content{
+    background-color: #003399;
+    display: flex;
+    margin: 0px,20px;
+    width: 100%;
+    &--subpage{
+      display: block;
+      width: 20%;
+      text-align: center;
+      margin: 10px;
+      a{
+        color: #fff;
+        font-size: 20px;
+      }
+    }
+  }
+}
+.main__image{
+  img{
+    width: 100%;
+  }
+}
+
+.main{
+  margin: 50px 0 0 0;
+  padding: 0 50px;
+  &__content{
+    display: flex;
+    justify-content: space-between;
+    &--image,&--image-secound,&--image-third{
+      img{
+        width: 100%;
+      }
+    }
+    &--image-secound{
+      margin:0 50px 30px 50px;
+    }
+  }
+}
+
+.footer{
+    background-color: #003399;
+    padding: 50px 50px;
+    color: #fff;
+    &__content{
+      display: flex;
+      &--first,&--scound,&--third{
+        h5{
+          border-bottom: 2px solid #fff;
+          font-size: 25px;
+        }
+        p{
+          margin-top: 25px;
+        }
+      }
+      &--scound{
+        margin:0 50px 0px 50px;
+      }
+    }
+}
+
+.under{
+  text-align: center;
+  font-size: 20px;
+  padding: 10px 0px;
+}  
