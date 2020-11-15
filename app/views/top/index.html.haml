@@ -2,22 +2,83 @@
   =link_to "https://www.pairs.lv/", class:"logo" do
     =image_tag "https://www.pairs.lv/wp-content/themes/pairs_pc/img/logo_pairs.png",class:"logo-image"
   .user
-    .user__login
-      =link_to "#" do
-        ログイン
-    .user__sin-up
-      =link_to "#" do
-        新規登録
+    -if user_signed_in? && current_user.id
+      .user__my-page
+        = link_to "#" do
+          マイページ
+    -else      
+      .user__login
+        =link_to "#" do
+          ログイン
+      .user__sin-up
+        =link_to "#" do
+          新規登録
+.menu
+  %ul.menu__content
+    %li.menu__content--subpage
+      =link_to "#"  do
+        ホーム
+    %li.menu__content--subpage
+      =link_to "#"  do
+        概要
+    %li.menu__content--subpage
+      =link_to "#"  do
+        サブページ
+    %li.menu__content--subpage
+      =link_to "#"  do
+        サブページ
+    %li.menu__content--subpage
+      =link_to "#"  do
+        サブページ
+    
+.main__image      
+  = image_tag "mainimg.jpg"
 
-.main        
-  .main-box
-    .main-box__left
-      = image_tag "https://www.pairs.lv/wp-content/themes/pairs_pc/img/No1.png?20201030103557", class:"main-box__left--image"
-      %P.main-box__left--message
-        今すぐ簡単登録!
-      .main-box__left--apple
-        -# =iamge_tag "http://www.w3.org/2000/svg"
-      .main-box__left--google
-        -# =iamge_tag "static/images/badges/ja_badge_web_generic.png"
-    .main-box__right
-      = image_tag "https://www.pairs.lv/wp-content/themes/pairs_pc/img/MV.jpg?20201030103557", class:"main-box__right--image"
+.main
+  .main__content
+    .main__content--image
+      = image_tag "catch.jpg"
+      %p
+        ここにタイトル
+    .main__content--image-secound
+      = image_tag "catch.jpg"
+      %p
+        ここにタイトル
+    .main__content--image-third
+      = image_tag "catch.jpg"
+      %p
+        ここにタイトル
+  .main__content
+    .main__content--image
+      = image_tag "catch.jpg"
+      %p
+        ここにタイトル
+    .main__content--image-secound
+      = image_tag "catch.jpg"
+      %p
+        ここにタイトル
+    .main__content--image-third
+      = image_tag "catch.jpg"
+      %p
+        ここにタイトル     
+
+.footer
+  .footer__content
+    .footer__content--first
+      %h5
+        フッター１
+      %p
+        ここにSNSやテキストなどが入ります。SNSやテキストなどが入ります。
+    .footer__content--scound
+      %h5
+        フッター2
+      %p
+        ここにSNSやテキストなどが入ります。SNSやテキストなどが入ります。
+    .footer__content--third
+      %h5 
+        フッター3
+      %p
+        ここにSNSやテキストなどが入ります。SNSやテキストなどが入ります。
+                
+.under  
+  Copyright © popodesign.

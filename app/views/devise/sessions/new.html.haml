@@ -1,0 +1,51 @@
+.header
+  =link_to "https://www.pairs.lv/", class:"logo" do
+    =image_tag "https://www.pairs.lv/wp-content/themes/pairs_pc/img/logo_pairs.png",class:"logo-image"
+  .user
+    .user__login
+      =link_to "#" do
+        ログイン
+    .user__sin-up
+      =link_to "#" do
+        新規登録
+
+.Session
+  .Session_box
+    .new_session
+      %p 会員ログイン
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      .session_email
+        メールアドレス
+        %br/
+        = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス"
+      .password_field3
+        パスワード
+        %br/
+        = f.password_field :password, autocomplete: "current-password", placeholder: "パスワード"
+      - if devise_mapping.rememberable?
+        -# .password_field4
+        -#   = f.check_box :remember_me
+        -#   = f.label :remember_me, "ログイン状態を保存する" 
+      .session_actions
+        = f.submit "ログインする", class: 'login_btn'
+        
+.footer
+  .footer__content
+    .footer__content--first
+      %h5
+        フッター１
+      %p
+        ここにSNSやテキストなどが入ります。SNSやテキストなどが入ります。
+    .footer__content--scound
+      %h5
+        フッター2
+      %p
+        ここにSNSやテキストなどが入ります。SNSやテキストなどが入ります。
+    .footer__content--third
+      %h5 
+        フッター3
+      %p
+        ここにSNSやテキストなどが入ります。SNSやテキストなどが入ります。
+                
+.under  
+  Copyright © popodesign.      

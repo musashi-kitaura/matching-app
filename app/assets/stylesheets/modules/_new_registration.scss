@@ -1,0 +1,59 @@
+.sign-up{
+  margin: 30px 600px 20px;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.user-main{ 
+  text-align: center;
+  margin-bottom: 50px;
+  .new_user {
+    .registration__nickname, .registration__email, .registration__password, .password__confirmation {
+      font-weight: bold;
+      padding-bottom: 10px;
+    }
+    .registration__nickname input[type="text"],.registration__email input[type="email"],.registration__password input[type="password"],.password__confirmation input[type="password"] {
+      width: 350px;
+      height: 40px;
+      padding-left: 15px;
+    }
+    .registration__name--contents {
+      padding-bottom: 10px;
+      font-weight: bold;
+      .contents-field__input  {
+        height: 40px;
+        width: 172px;
+      }
+    }
+    .registration__namekana--contents{
+     padding-bottom: 10px;
+     font-weight: bold;
+      .contents-field__input  {
+      height: 40px;
+      width: 172px;
+      }
+    }
+  
+    .actions {
+      margin-top: 20px;
+      .signin--btn {
+        display: inline-block;
+        border: solid 1px #003399;
+        border-radius: 5px;
+        width: 350px;
+        height: 40px;
+        color: white;
+        background-color: #003399;
+        font-size: 20px;
+      }
+    }
+  }
+}  
+.must {
+  color:white;
+  border: solid 2px red;
+  background-color: red;
+  border-radius: 5px;
+
+}
