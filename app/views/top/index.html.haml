@@ -2,12 +2,17 @@
   =link_to "https://www.pairs.lv/", class:"logo" do
     =image_tag "https://www.pairs.lv/wp-content/themes/pairs_pc/img/logo_pairs.png",class:"logo-image"
   .user
-    .user__login
-      =link_to "#" do
-        ログイン
-    .user__sin-up
-      =link_to "#" do
-        新規登録
+    -if user_signed_in? && current_user.id
+      .user__my-page
+        = link_to "#" do
+          マイページ
+    -else      
+      .user__login
+        =link_to "#" do
+          ログイン
+      .user__sin-up
+        =link_to "#" do
+          新規登録
 .menu
   %ul.menu__content
     %li.menu__content--subpage
