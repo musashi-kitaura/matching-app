@@ -1,3 +1,53 @@
 .search-box{
-  
+  border-left: 1px solid gray;
+  width: 920px;
+  padding-top: 20px;
+  overflow: scroll;
+  &__feature{
+    font-size: 28px;
+    line-height: 42px;
+    font-weight: 600; 
+    margin: 0px 52px 0px 40px;
+  }
+  &__text{
+      width: 80%;
+      margin: 25px 23px 0px 40px;
+  }
+  .main-matching{
+    gap: 24px 16px;
+    display: flex;
+    padding: 40px 40px;
+    overflow-wrap: break-word;
+    &__content{
+      width: 20%;
+      height: 150px;
+      &--image{
+        img{
+          background-color: rgb(248, 249, 249);
+          border-radius: 50%;
+          object-fit: cover;
+          width: 100%;
+          height: 150px;
+        } 
+      }
+      &--information{
+        width: 100%;
+        padding: 0px 0px 0px 20px;
+        .age {
+          margin-right: 30px;
+        }
+        p{
+          display: inline;
+        }
+      }
+      &--word{
+        color: #8d9399;
+        color: var(--color-gray-03);
+        font-size: 11px;
+        line-height: 14px;
+        margin-top: 6px;
+        word-break: break-word;
+      }
+    }  
+  }
 }
