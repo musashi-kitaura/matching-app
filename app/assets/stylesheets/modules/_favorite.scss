@@ -1,0 +1,39 @@
+.favorite-main{
+  background-color: #f8f8f8;
+  padding: 40px;
+  height: 100%;
+  .favorite__content{
+    width: 700px;
+    margin: 0 auto;
+    justify-content: center;
+    background-color: #fff;
+    text-align: center;
+    .image__first{
+      padding: 50px 80px;
+      img{
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .how-nice{
+      &__button{
+        width: 80%;
+        height: 50px;
+        font-size: 30px;
+        background-color:pink;
+        color: red;
+        border-radius: 20px;
+      }
+    }
+    .name{
+      display: inline;
+      font-size: 30px;
+    }
+    .self-introduction{
+      padding: 0px 50px 0px 50px;
+      text-align: left;
+      &__top{
+      }
+    }  
+  }
+}

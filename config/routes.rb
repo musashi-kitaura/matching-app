@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
-  get 'category/index'
+  # get 'categorys/index'
   devise_for :users
-  root 'top#index'
-  resources :categorys, only: [:index]
+  root 'tops#index'
+  resources :categorys, only: [:index] do
+    collection do 
+      get 'favorite'
+    end
+  end  
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
