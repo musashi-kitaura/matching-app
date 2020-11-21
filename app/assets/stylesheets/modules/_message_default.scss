@@ -1,0 +1,21 @@
+.message-default{
+  width: 50%;
+  padding: 300px 0px;
+  text-align: center;
+  &__top{
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 600;
+    text-align: center;
+  }
+  &__main{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 500;
+    color: rgb(141, 147, 153);
+    text-align: center;
+  }
+
+}
