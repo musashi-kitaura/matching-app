@@ -12,7 +12,7 @@
     = link_to "#", class: "side-bar-main__how-nice" ,style:"display: block;"do
       = icon('fas', 'binoculars')
       お相手から
-    = link_to "#", class: "side-bar-main__message" ,style:"display: block;"do
+    = link_to "/messages", class: "side-bar-main__message" ,style:"display: block;"do
       = icon('fas', 'binoculars')
       メッセージ
     = link_to "#", class: "side-bar-main__profile" ,style:"display: block;"do
@@ -24,3 +24,7 @@
     = link_to "#", class: "side-bar-main__other",style:"display: block;" do
       = icon('fas', 'binoculars')
       その他
+    
+    = link_to destroy_user_session_path,method: :delete, class: "side-bar-main__other", style:"display: block;" do
+      = icon('fas', 'binoculars')
+      ログアウト

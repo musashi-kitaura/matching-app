@@ -1,0 +1,116 @@
+.message-box-content{
+  &__header{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    height: 56px;
+    padding: 16px 32px 14px 16px;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgb(235, 236, 237);
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    z-index: 160;
+    &--name{
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 600;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    &--image{
+      width: 32px;
+      height: 32px;
+      margin-left: 400px;
+      display: block;
+      .message-box-content__header--image-box{
+        width: 100%;
+        height: 100%;
+        background-color: rgb(248, 249, 249);
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+  }
+  .message-box-content-main{
+    
+    &__message-box{
+      margin-top: 24px;
+      padding: 0px 16px;
+      &--main{
+        display: flex;
+        flex-direction: row;
+        -webkit-box-pack: end;
+        justify-content: flex-end;
+        width: 100%;
+        .message-content{
+          border-radius: 20px;
+          padding: 8px 16px;
+          color: rgb(255, 255, 255);
+          background-color: rgb(0, 196, 204);
+          box-sizing: border-box;
+          max-width: 100%;
+        }
+      }
+    }
+    &__message-box-second{
+      margin-top: 24px;
+      padding: 0px 16px;
+      .message-box-content-main__message-box-secound--main{
+        display: flex;
+        flex-direction: row;
+        -webkit-box-pack: end;
+        width: 100%;
+        .message-content-second{
+          border-radius: 20px;
+          padding: 8px 16px;
+          color: rgb(255, 255, 255);
+          background-color: rgb(0, 196, 204);
+          box-sizing: border-box;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+  .message-text{
+    background: #fff;
+    bottom: 0;
+    max-width: 615px;
+    position: fixed;
+    width: 100%;
+    border-top: 1px solid rgb(235, 236, 237);
+    &__main{
+      width: 100%;
+      border: 0;
+      box-sizing: border-box;
+      height: 64px;
+      outline: 0;
+      padding: 24px 24px 0;
+    }
+    &__submit-main{
+    width: 120px;
+      &--submit{
+        width: 100%;
+        font-size: 14px;
+        height: 40px;
+        line-height: 40px;
+        background-color: #00c4cc;
+        border-radius: 100px;
+        border-style: none;
+        color: #fff;
+        display: inline-block;
+        font-weight: bold;
+        outline: none;
+        padding: 0 20px;
+        text-align: center;
+        white-space: nowrap;
+        margin-left: 500px;
+      }
+    }
+  }
+}
