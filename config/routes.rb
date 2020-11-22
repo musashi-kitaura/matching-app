@@ -2,13 +2,17 @@ Rails.application.routes.draw do
   # get 'categorys/index'
   devise_for :users
   root 'tops#index'
-  resources :categorys, only: [:index] do
-    collection do 
+  resources :users ,only: [:index, :show] do
+    member do
       get 'favorite'
     end
   end  
-  resources :messages, only: [:index] do
-    collection do 
+  
+  resources :relationships, only: [:create, :destroy]
+  resources :categorys, only: [:index] do
+  end  
+  resources :messages, only: [:index,:show] do
+    member do
       get 'message'
     end
   end
