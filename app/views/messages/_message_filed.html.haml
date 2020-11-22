@@ -5,103 +5,104 @@
     .message-header__content  
       やりとり中
   .message-main 
-    .message-main__content
-      = image_tag "https://navi.harinezumi.org/wp-content/uploads/kohari12.jpg",class:"message-main__content--image"
-      .message-main__content--box
-        %span
-          北浦武蔵
-        %span
-          24歳
-        %span  
-          東京
-        .message-maim__content--message
-          メッセージが届いています
+    - @users.each do |user|
+      .message-main__content
+        = image_tag "https://navi.harinezumi.org/wp-content/uploads/kohari12.jpg",class:"message-main__content--image"
+        .message-main__content--box
+          %span
+            = user.nickname
+          %span
+            24歳
+          %span  
+            東京
+          .message-maim__content--message
+            メッセージが届いています
 
-    .message-main__content
-      = image_tag "https://navi.harinezumi.org/wp-content/uploads/kohari12.jpg",class:"message-main__content--image"
-      .message-main__content--box
-        %span
-          北浦武蔵
-        %span
-          24歳
-        %span  
-          東京
-        .message-maim__content--message
-          メッセージが届いています
-    .message-main__content
-      = image_tag "https://navi.harinezumi.org/wp-content/uploads/kohari12.jpg",class:"message-main__content--image"
-      .message-main__content--box
-        %span
-          北浦武蔵
-        %span
-          24歳
-        %span  
-          東京
-        .message-maim__content--message
-          メッセージが届いています
-    .message-main__content
-      = image_tag "https://navi.harinezumi.org/wp-content/uploads/kohari12.jpg",class:"message-main__content--image"
-      .message-main__content--box
-        %span
-          北浦武蔵
-        %span
-          24歳
-        %span  
-          東京
-        .message-maim__content--message
-          メッセージが届いています      
-    .message-main__content
-      = image_tag "https://navi.harinezumi.org/wp-content/uploads/kohari12.jpg",class:"message-main__content--image"
-      .message-main__content--box
-        %span
-          北浦武蔵
-        %span
-          24歳
-        %span  
-          東京
-        .message-maim__content--message
-          メッセージが届いています
-    .message-main__content
-      = image_tag "https://navi.harinezumi.org/wp-content/uploads/kohari12.jpg",class:"message-main__content--image"
-      .message-main__content--box
-        %span
-          北浦武蔵
-        %span
-          24歳
-        %span  
-          東京
-        .message-maim__content--message
-          メッセージが届いています            
-    .message-main__content
-      = image_tag "https://navi.harinezumi.org/wp-content/uploads/kohari12.jpg",class:"message-main__content--image"
-      .message-main__content--box
-        %span
-          北浦武蔵
-        %span
-          24歳
-        %span  
-          東京
-        .message-maim__content--message
-          メッセージが届いています      
-    .message-main__content
-      = image_tag "https://navi.harinezumi.org/wp-content/uploads/kohari12.jpg",class:"message-main__content--image"
-      .message-main__content--box
-        %span
-          北浦武蔵
-        %span
-          24歳
-        %span  
-          東京
-        .message-maim__content--message
-          メッセージが届いています      
-    .message-main__content
-      = image_tag "https://navi.harinezumi.org/wp-content/uploads/kohari12.jpg",class:"message-main__content--image"
-      .message-main__content--box
-        %span
-          北浦武蔵
-        %span
-          24歳
-        %span  
-          東京
-        .message-maim__content--message
-          メッセージが届いています          
+    -# .message-main__content
+    -#   = image_tag "https://navi.harinezumi.org/wp-content/uploads/kohari12.jpg",class:"message-main__content--image"
+    -#   .message-main__content--box
+    -#     %span
+    -#       北浦武蔵
+    -#     %span
+    -#       24歳
+    -#     %span  
+    -#       東京
+    -#     .message-maim__content--message
+    -#       メッセージが届いています
+    -# .message-main__content
+    -#   = image_tag "https://navi.harinezumi.org/wp-content/uploads/kohari12.jpg",class:"message-main__content--image"
+    -#   .message-main__content--box
+    -#     %span
+    -#       北浦武蔵
+    -#     %span
+    -#       24歳
+    -#     %span  
+    -#       東京
+    -#     .message-maim__content--message
+    -#       メッセージが届いています
+    -# .message-main__content
+    -#   = image_tag "https://navi.harinezumi.org/wp-content/uploads/kohari12.jpg",class:"message-main__content--image"
+    -#   .message-main__content--box
+    -#     %span
+    -#       北浦武蔵
+    -#     %span
+    -#       24歳
+    -#     %span  
+    -#       東京
+    -#     .message-maim__content--message
+    -#       メッセージが届いています      
+    -# .message-main__content
+    -#   = image_tag "https://navi.harinezumi.org/wp-content/uploads/kohari12.jpg",class:"message-main__content--image"
+    -#   .message-main__content--box
+    -#     %span
+    -#       北浦武蔵
+    -#     %span
+    -#       24歳
+    -#     %span  
+    -#       東京
+    -#     .message-maim__content--message
+    -#       メッセージが届いています
+    -# .message-main__content
+    -#   = image_tag "https://navi.harinezumi.org/wp-content/uploads/kohari12.jpg",class:"message-main__content--image"
+    -#   .message-main__content--box
+    -#     %span
+    -#       北浦武蔵
+    -#     %span
+    -#       24歳
+    -#     %span  
+    -#       東京
+    -#     .message-maim__content--message
+    -#       メッセージが届いています            
+    -# .message-main__content
+    -#   = image_tag "https://navi.harinezumi.org/wp-content/uploads/kohari12.jpg",class:"message-main__content--image"
+    -#   .message-main__content--box
+    -#     %span
+    -#       北浦武蔵
+    -#     %span
+    -#       24歳
+    -#     %span  
+    -#       東京
+    -#     .message-maim__content--message
+    -#       メッセージが届いています      
+    -# .message-main__content
+    -#   = image_tag "https://navi.harinezumi.org/wp-content/uploads/kohari12.jpg",class:"message-main__content--image"
+    -#   .message-main__content--box
+    -#     %span
+    -#       北浦武蔵
+    -#     %span
+    -#       24歳
+    -#     %span  
+    -#       東京
+    -#     .message-maim__content--message
+    -#       メッセージが届いています      
+    -# .message-main__content
+    -#   = image_tag "https://navi.harinezumi.org/wp-content/uploads/kohari12.jpg",class:"message-main__content--image"
+    -#   .message-main__content--box
+    -#     %span
+    -#       北浦武蔵
+    -#     %span
+    -#       24歳
+    -#     %span  
+    -#       東京
+    -#     .message-maim__content--message
+    -#       メッセージが届いています          

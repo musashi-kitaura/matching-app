@@ -1,0 +1,24 @@
+.message-box-content
+  .message-box-content__header
+    .message-box-content__header--name
+      北浦武蔵
+    .message-box-content__header--image 
+      = image_tag "https://navi.harinezumi.org/wp-content/uploads/kohari12.jpg",class:"message-box-content__header--image-box"
+  
+  .message-box-content-main
+    %ul.message-box-content-main__message-box
+      %li.message-box-content-main__message-box--main
+        .message-content
+          おはようございます
+    
+    %ul.message-box-content-main__message-box-second
+      %li.message-box-content-main__message-box-secound--main
+        .message-content-second
+          おはようございます
+  .message-text
+    %textarea.message-text__main{"data-test" => "message-textarea", :placeholder => "メッセージを入力"} 
+    .message-text__submit-main
+      %button.message-text__submit-main--submit{:type =>"submit" }    
+        送信
+      
+      
