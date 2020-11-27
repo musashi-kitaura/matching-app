@@ -6,19 +6,30 @@
       = image_tag "https://navi.harinezumi.org/wp-content/uploads/kohari12.jpg",class:"message-box-content__header--image-box"
   
   .message-box-content-main
-    %ul.message-box-content-main__message-box
-      %li.message-box-content-main__message-box--main
-        .message-content
-          おはようございます
+    - @messages.each do |message|
+      - if message.user == current_user  
+        %ul.message-box-content-main__message-box-second
+          %li.message-box-content-main__message-box-secound--main
+            .message-content-second
+              = message.message  
+      -else  
+        %ul.message-box-content-main__message-box-second
+          %li.message-box-content-main__message-box-secound--main
+            .message-content-second
+              = message.message 
+    -# %ul.message-box-content-main__message-box
+    -#   %li.message-box-content-main__message-box--main
+    -#     .message-content
+    -#       おはようございます
     
-    %ul.message-box-content-main__message-box-second
-      %li.message-box-content-main__message-box-secound--main
-        .message-content-second
-          おはようございます
+    -# %ul.message-box-content-main__message-box-second
+    -#   %li.message-box-content-main__message-box-secound--main
+    -#     .message-content-second
+    -#       おはようございます
   .message-text
-    %textarea.message-text__main{"data-test" => "message-textarea", :placeholder => "メッセージを入力"} 
-    .message-text__submit-main
-      %button.message-text__submit-main--submit{:type =>"submit" }    
-        送信
-      
-      
+    = form_with model: [@message] ,local: true do |f|
+      = f.text_field :message, class: 'message-text__main', placeholder: "メッセージを入力"
+      = f.hidden_field :room_id, value: @room.id
+      .message-text__submit-main
+        = f.submit '送信', class: 'message-text__submit-main--submit'
+        
