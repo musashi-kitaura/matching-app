@@ -28,7 +28,7 @@ class RoomsController < ApplicationController
   end   
   def show  
     @users = current_user.matchers
-    @room = Room.find(params[:id])
+    @room = Room.find(params[:id]) 
     if Entry.where(:user_id => current_user.id, :room_id => @room.id).present?
       @messages = @room.messages
       @message = Message.new
@@ -45,6 +45,6 @@ class RoomsController < ApplicationController
   end
   private
   def join_room_params
-      params.require(:entry).permit(:user_id, :room_id).merge(room_id: @room.id)
+    params.require(:entry).permit(:user_id, :room_id).merge(room_id: @room.id)
   end
 end

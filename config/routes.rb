@@ -11,11 +11,7 @@ Rails.application.routes.draw do
   resources :relationships, only: [:create, :destroy]
   resources :categorys, only: [:index] do
   end  
-  resources :messages, only: [:index,:show] do
-    member do
-      get 'message'
-    end
-  end
-  resources :rooms, only: [:index, :create, :show]
+  resources :rooms, only: [:index, :create, :show] 
+  resources :messages, only: [:index,:show,:create] 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
