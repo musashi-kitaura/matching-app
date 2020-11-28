@@ -6,7 +6,7 @@
       やりとり中
   .message-main 
     - @users.each do |user|
-      - if @box = @roomId
+      - if @isRoom = true 
         =link_to "/rooms/#{@roomId}" do
           %label 
             .message-main__content
@@ -21,22 +21,22 @@
                 .message-maim__content--message
                   メッセージが届いています
       -else              
-        %label 
-          .message-main__content
-            = image_tag "https://navi.harinezumi.org/wp-content/uploads/kohari12.jpg",class:"message-main__content--image"
-            .message-main__content--box
-              %span
-                = user.nickname
-              %span
-                24歳
-              %span  
-                東京
-              .message-maim__content--message
-                メッセージが届いています
-              = form_with model: @room, local: true do |f|
-                = fields_for @entry do |e|
-                  = e.hidden_field :user_id, :value=> user.id   
-                = f.submit "メッセージを始める", class: "submit"
+      %label 
+        .message-main__content
+          = image_tag "https://navi.harinezumi.org/wp-content/uploads/kohari12.jpg",class:"message-main__content--image"
+          .message-main__content--box
+            %span
+              = user.nickname
+            %span
+              24歳
+            %span  
+              東京
+            .message-maim__content--message
+              メッセージが届いています
+            = form_with model: @room, local: true do |f|
+              = fields_for @entry do |e|
+                = e.hidden_field :user_id, :value=> user.id   
+              = f.submit "メッセージを始める", class: "submit"
           -# - if @isRoom = true 
           -#   =link_to "/rooms/#{@roomId}" do
           -#     チャットに進む

@@ -1,6 +1,5 @@
 class RoomsController < ApplicationController
   def index
-    @box = Room.all
     @users = current_user.matchers
     @users.each do |e|
       @user = e
@@ -11,7 +10,6 @@ class RoomsController < ApplicationController
     @userEntry=Entry.where(user_id: @user.id)
     # 新規登録されたマッチングされたユーザーの情報を取得する
     if @user.id == current_user.id
-    
     else
       @currentUserEntry.each do |cu|
         @userEntry.each do |u|
@@ -27,7 +25,7 @@ class RoomsController < ApplicationController
         @entry = Entry.new
       end 
     end
-    # binding.pry
+    binding.pry
   end   
   def show  
     @users = current_user.matchers
@@ -41,33 +39,6 @@ class RoomsController < ApplicationController
       @entries = @room.entries
     else
       redirect_back(fallback_location: root_path)
-    end
-    @box = Room.all
-    @users = current_user.matchers
-    @users.each do |e|
-      @user = e
-    end  
-    # マッチングしたユーザー情報を取得
-    @currentUserEntry=Entry.where(user_id: current_user.id)
-    # エントリーさせたユーザー情報のidを取得。新規登録されたもの
-    @userEntry=Entry.where(user_id: @user.id)
-    # 新規登録されたマッチングされたユーザーの情報を取得する
-    if @user.id == current_user.id
-    
-    else
-      @currentUserEntry.each do |cu|
-        @userEntry.each do |u|
-          if cu.room_id == u.room_id then
-            @isRoom = true
-            @roomId = cu.room_id
-          end
-        end
-      end
-      if @isRoom
-      else
-        @room = Room.new
-        @entry = Entry.new
-      end 
     end
   end  
   def create 
