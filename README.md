@@ -24,7 +24,6 @@ Things you may want to cover:
 * ...
 
 ## usersテーブル
-
 |Column|Type|Options|
 |------|----|-------|
 |nickname|string|null: false|
@@ -32,97 +31,50 @@ Things you may want to cover:
 |password|string|null: false|
 
 ### Association
-- has_one:credit_card
-- has_many:purchases
-- has_many:items
+- has_many :following_relationships
+- has_many :followings
+- has_many :follower_relationships
+- has_many :followers
+- has_many :messages
+- has_many :rooms
+
+## room テーブル
+
+### Association
+- has_many :entries
 - has_many:messages
 
-## itemsテーブル
+## relationshipsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|user|references|null :false, foreign_key: true|
-|item_name|string|null: false|
-|item_description|text|null: false|
-|category_id|integer|null: false,uniqueness: true|
-|conditon_id|integer|null: false|
-|shopping_charges_id|integer|null: false|
-|prefecture_id|integer|null: false|
-|days_to_delivery|integer|null: false|
+|follower_id|integer|||
+|following_id|integer|||
 
 ### Association
-- has_many:item_images
-- has_many:messages
-- has_one:purchase
-- belongs_to:user
-- belongs_to_active_hash:category
-- belongs_to_active_hash:condition
-- belongs_to_active_hash:shipping_charges
-- belongs_to_active_hash:days_to_delivry
-- belongs_to_active_hash:prefecture
+- belongs_to :follower
+- belongs_to :following
 
-## credit_cardsテーブル
+## messageテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|references|null: false,foregin_key: true|
-|customer_id|string|null: false|
-|card_id|string|null: false|
-
+|message|text|null: false|
+|user|references||
+|room|references||
 
 ### Association
-- belongs_to: user
+- belongs_to :user 
+- belongs_to :room
 
-## item_imagesテーブル
+
+## entryテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|image|string|null: false|
-|item|references|null: false, foreign_key: true|
+|user|references||
+|room|references||
 
 ### Association
-- belongs_to: item
-
-
-## addressesテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|user|references|null: false, foreign_key: true|
-|address_first_name|string| null: false|
-|address_family_name|string|null: false|
-|address_first_name_kana|string|null: false|
-|address_family_name_kana|string|null: false|
-|post_code|string|null: false|
-|prefecture_id|string|null: false|
-|city|date|null: false|
-|address_line|string|null: false|
-|building_name|string||
-|phone_number|integer|null:false,uniqueness:true|
-
-### Association
-- belongs_to:user
-- belongs_to_active_hash:prefecture
-
-## purchasesテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|user|references|null: false, foreign_key: true|
-|item|references|null: false, foreign_key: true|
-
-### Association
-- belonge_to:user
-- belonge_to:item
-
-## messages
-
-|Column|Type|Options|
-|------|----|-------|
-|user|references|null: false, foreign_key: true|
-|item|references|null: false, foreign_key: true|
-|introduction|text|null: false|
-
-### Association
-- belonge_to:user
-- belonge_to:item
+- belongs_to :user
+- belongs_to :room
