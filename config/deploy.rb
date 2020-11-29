@@ -1,8 +1,8 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.14.1"
 
-set :application, "matching-app"
-set :repo_url, "git@github.com:musashi-kitaura/matching-app.git"
+set :application, 'matching-app'
+set :repo_url, 'git@github.com:musashi-kitaura/matching-app.git'
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
 set :rbenv_type, :user
 set :rbenv_ruby, '2.6.5'
