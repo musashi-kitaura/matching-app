@@ -25,7 +25,6 @@ class RoomsController < ApplicationController
         @entry = Entry.new
       end 
     end
-    binding.pry
   end   
   def show  
     @users = current_user.matchers
