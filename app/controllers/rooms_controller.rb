@@ -25,7 +25,9 @@ class RoomsController < ApplicationController
         @entry = Entry.new
       end 
     end
-  end   
+  end 
+  
+  
   def show  
     @users = current_user.matchers
     @users.each do |user|
