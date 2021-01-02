@@ -42,6 +42,7 @@ class RoomsController < ApplicationController
       redirect_back(fallback_location: root_path)
     end
   end  
+  
   def create 
     @room = Room.create
     @joinCurrentUser = Entry.create(user_id: current_user.id, room_id: @room.id)

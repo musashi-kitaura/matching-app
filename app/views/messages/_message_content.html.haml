@@ -1,7 +1,10 @@
 .message-box-content
   .message-box-content__header
     .message-box-content__header--name
-      = @user.nickname
+      - @entries.each do |e| 
+        - if e.user.nickname == current_user.nickname
+        -else
+          = e.user.nickname
     .message-box-content__header--image 
       = image_tag "https://navi.harinezumi.org/wp-content/uploads/kohari12.jpg",class:"message-box-content__header--image-box"
   
