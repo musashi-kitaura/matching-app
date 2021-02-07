@@ -9,6 +9,7 @@ class User < ApplicationRecord
   has_many :followers, through: :follower_relationships
   has_many :messages
   has_many :rooms
+  has_many :entries
 
 
 

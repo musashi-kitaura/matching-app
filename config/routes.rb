@@ -8,10 +8,10 @@ Rails.application.routes.draw do
     end
   end  
   
-  resources :relationships, only: [:create, :destroy]
+  resources :relationships, only: [:index,:create, :destroy,]
   resources :categorys, only: [:index] do
   end  
-  resources :rooms, only: [:index, :create, :show] 
-  resources :messages, only: [:index,:show,:create] 
+  resources :rooms, only: [:index, :create, :show]  
+  resources :messages, only: [:index,:create] 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
