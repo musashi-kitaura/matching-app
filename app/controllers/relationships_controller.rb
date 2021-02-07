@@ -1,4 +1,7 @@
 class RelationshipsController < ApplicationController
+  def index
+    @users = current_user.matchers
+  end  
   def create
     current_user.following_relationships.create(create_params)
     redirect_to root_path
