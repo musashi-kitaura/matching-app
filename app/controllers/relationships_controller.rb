@@ -6,7 +6,7 @@ class RelationshipsController < ApplicationController
     current_user.following_relationships.create(create_params)
     redirect_to root_path
   end
-
+  
   def destroy
     @user=current_user.id 
     @relationship =  Relationship.where(following_id: params[:id],follower_id:@user.id)

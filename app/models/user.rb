@@ -10,9 +10,8 @@ class User < ApplicationRecord
   has_many :messages
   has_many :rooms
   has_many :entries
-
-
-
+  validates :profile, length: { maximum: 250 }
+  mount_uploader :image, ImageUploader
   def following?(other_user)
     following_relationships.find_by(following_id: other_user.id)
   end
