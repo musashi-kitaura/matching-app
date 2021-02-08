@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   # get 'categorys/index'
   devise_for :users
   root 'tops#index'
-  resources :users ,only: [:index, :show] do
+  resources :users ,only: [:index, :show,:edit,:update] do
     member do
       get 'favorite'
     end
