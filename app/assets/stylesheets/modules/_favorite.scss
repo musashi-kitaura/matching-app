@@ -1,18 +1,22 @@
 .favorite-main{
-  background-color: #f8f8f8;
-  padding: 40px;
-  height: 100%;
   .favorite__content{
     width: 700px;
     margin: 0 auto;
     justify-content: center;
     background-color: #fff;
     text-align: center;
+    padding-top: 50px;
+    .name{
+    }
     .image__first{
       padding: 50px 80px;
       img{
         height: 100%;
         width: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        width: 100%;
+        height: 500px;
       }
     }
     .how-nice{
