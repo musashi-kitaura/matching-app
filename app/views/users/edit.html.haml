@@ -2,22 +2,32 @@
   = render "categorys/side_bar"
   = form_for(current_user) do |f|
     //アイコン追加部分
+    .profile-heder
     .profile-main 
-      .profile-main__image--icon__label
-      .account-page__inner--icon__input
-        - if @image.present?
-          = image_tag @image.url, class: 'account-page__inner--icon__input__image', width: '100%'
-        .account-page__inner--icon__input__image2
-        = f.file_field :image, class: 'account-page__inner--icon__input__btn', id: 'upload-icon'
+      %label.profile-main__image--icon__label
+        .profile-main__image--icon__input
+          - if @image.present?
+            = image_tag @image.url,class: 'profile-main__image--icon__input__image', width: '100%'
+          .profile-main__image--icon__input__image2
+          = f.file_field :image,  id: 'upload-icon'
+      .profile-main__name    
+        武蔵
+    .line   
+    .tweet-main
+      .tweet-main__icon
+        つぶやき
+      .tweet-main__text
+        = f.text_area :tweet
 
-    .account-page__inner--user-form
-      (省略)
-      // プロフィール追加部分
+    .line
+       
+    .profile-main__user-profile
       .field
         .field-label
-          = f.label :profile
+          自己紹介
         .field-input
           = f.text_area :profile, autocomplete: 'off'
-      (省略)
+
+    .line    
     .actions
-      =f.submit "Update" 
+      =f.submit "編集" ,class: "actions-name"

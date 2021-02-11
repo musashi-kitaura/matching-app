@@ -1,20 +1,26 @@
-.favorite-main
-  .favorite__content
-    .image__first
-      -if @user.image.present?
-        = image_tag @user.image.url, width: '100%'
-    .how-nice
-      =form_with model: @relationship, local: true do |f|
-        %div= hidden_field_tag :following_id, @user.id
-        %button.how-nice__button{:type =>"submit"}
-          いいね
-          %i.fas.fa-heart 
-    %h2.name
-      = @user.nickname
-    .self-introduction  
-      .self-introduction__top
-        自己紹介文
-      .self-introduction__content
-        HSS型HSEである武蔵です☺️20歳で正看護師を取得→3年間看護師として急性期病棟で働く。異動続きでほとんどの科を経験）→ストレスで鬱→成長のため100万の自己投資。→フルコミの営業。→環境が合わず鬱→現在、派遣看護師とプログラマーとして活動中😄
+.wrapper
+  = render "categorys/side_bar"
+  .favorite-main
+    .favorite__content 
+      %h2.name
+        = @user.nickname
+      .image__first
+        -if @user.image.present?
+          = image_tag @user.image.url, width: '100%'
+      .how-nice
+        =form_with model: @relationship, local: true do |f|
+          %div= hidden_field_tag :following_id, @user.id
+          %button.how-nice__button{:type =>"submit"}
+            いいね
+            %i.fas.fa-heart 
+      .profile-tweet
+         
+        = @user.tweet     
+      .self-introduction  
+        .self-introduction__top
+          自己紹介
+        .self-introduction__content
+          = @user.profile
+          -# HSS型HSEである武蔵です☺️20歳で正看護師を取得→3年間看護師として急性期病棟で働く。異動続きでほとんどの科を経験）→ストレスで鬱→成長のため100万の自己投資。→フルコミの営業。→環境が合わず鬱→現在、派遣看護師とプログラマーとして活動中😄
     
 
