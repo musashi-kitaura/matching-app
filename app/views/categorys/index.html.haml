@@ -1,3 +1,18 @@
 .wrapper
   = render "side_bar"
-  = render "main_chat"
+  .category
+    .category-header
+      .category-header__name
+        ハリネズミ
+      .category-header__picture
+        = image_tag "https://navi.harinezumi.org/wp-content/uploads/kohari12.jpg", width: '100%',height: '100%'
+
+    .communities-main
+      .communities-main__recommended
+        %h1おすすめ
+        .communities-main__recommended-index
+          .communities-main__recommended-index--details
+            .communities-image  
+              = image_tag "https://navi.harinezumi.org/wp-content/uploads/kohari12.jpg", width: '100%',height: '100%'
+            .communities-name
+              ハリネズミ
