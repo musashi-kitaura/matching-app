@@ -21,9 +21,13 @@
       height: 180px;
       border-radius: 100%;
       overflow: hidden;
+      position: relative;
       &__image{
         
       }
+    }
+    .profile-main__image--icon__input__btn{
+      display: none;
     }
   }
 

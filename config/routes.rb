@@ -7,7 +7,7 @@ Rails.application.routes.draw do
       get 'favorite'
     end
   end  
-  
+  resources :communities, only: [:index, :show] 
   resources :relationships, only: [:index,:create, :destroy,]
   resources :categorys, only: [:index] do
   end  
