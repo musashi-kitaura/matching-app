@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Community.create!(
+  [
+    {name: 'モンハン',image:File.open("app/assets//images/20200515-00178549-roupeiro-000-9-view.jpg")},
+    {name: 'ウイニングイレブン',image:File.open("app/assets/images/add_2471.jpg")},
+  ]
+)   

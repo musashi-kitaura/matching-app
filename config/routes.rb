@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   end  
   resources :communities, only: [:index, :show] 
   resources :relationships, only: [:index,:create, :destroy,]
-  resources :categorys, only: [:index] do
+  resources :categories, only: [:index] do
   end  
   resources :rooms, only: [:index, :create, :show]  
   resources :messages, only: [:index,:create] 
