@@ -1,3 +1,4 @@
 class Category < ApplicationRecord
-  has_many :category_images
+  has_many :communities
+  mount_uploader :image, ImageUploader
 end
