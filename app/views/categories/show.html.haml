@@ -1,0 +1,20 @@
+.wrapper
+  = render "side_bar"
+  .category
+    .category-header
+      .category-header__name
+        = @category.name
+      .category-header__picture
+        = image_tag @category.image.url, width: '100%',height: '100%'
+
+    .communities-main
+      -@community_all.each do |communty|
+        .communities-main__recommended
+          %h1おすすめ
+          = link_to community_path(communty.id) do
+            .communities-main__recommended-index
+              .communities-main__recommended-index--details
+                .communities-image  
+                  = image_tag communty.image.url, width: '100%',height: '100%'
+                .communities-name
+                  = communty.name

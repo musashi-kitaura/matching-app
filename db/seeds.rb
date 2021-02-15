@@ -7,7 +7,14 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Community.create!(
   [
-    {name: 'モンハン',image:File.open("app/assets//images/20200515-00178549-roupeiro-000-9-view.jpg")},
-    {name: 'ウイニングイレブン',image:File.open("app/assets/images/add_2471.jpg")},
+    {name: 'モンハン',image:File.open("app/assets//images/20200515-00178549-roupeiro-000-9-view.jpg"),category_id: 1},
+    {name: 'ウイニングイレブン',image:File.open("app/assets/images/d50711-181-204570-12.jpg"),category_id: 2},
   ]
 )   
+
+Category.create!(
+  [
+    {name: 'アクションゲーム',image:File.open("app/assets//images/20200515-00178549-roupeiro-000-9-view.jpg")},
+    {name: 'シューティングゲーム',image:File.open("app/assets//images/20200515-00178549-roupeiro-000-9-view.jpg")},
+  ]
+)  

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_14_035752) do
+ActiveRecord::Schema.define(version: 2021_02_14_032855) do
 
   create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -19,27 +19,13 @@ ActiveRecord::Schema.define(version: 2021_02_14_035752) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "category_images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "category_id"
-    t.string "image"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["category_id"], name: "index_category_images_on_category_id"
-  end
-
   create_table "communities", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.string "image"
+    t.bigint "category_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "community_images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "community_image", null: false
-    t.bigint "community_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["community_id"], name: "index_community_images_on_community_id"
+    t.index ["category_id"], name: "index_communities_on_category_id"
   end
 
   create_table "community_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

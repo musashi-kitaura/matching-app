@@ -7,10 +7,9 @@ Rails.application.routes.draw do
       get 'favorite'
     end
   end  
-  resources :communities, only: [:index, :show] 
+  resources :communities, only: [:index, :show, :create] 
   resources :relationships, only: [:index,:create, :destroy,]
-  resources :categories, only: [:index] do
-  end  
+  resources :categories, only: [:show] 
   resources :rooms, only: [:index, :create, :show]  
   resources :messages, only: [:index,:create] 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
