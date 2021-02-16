@@ -6,11 +6,10 @@ class CommunitiesController < ApplicationController
   
   def show
     @community = Community.find(params[:id]) 
-    @community_create = CommunityUser.new
+    @community_user = CommunityUser.new
+    @community_users=CommunityUser.all
   end
 
   def create
-    community = CommunityUser.create(params.permit(:community_id,:user_id, ).merge(:user_id => current_user.id))
-     redirect_to "/Communities/#{community.room_id}"
   end
 end
