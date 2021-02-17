@@ -11,6 +11,7 @@ class User < ApplicationRecord
   has_many :rooms
   has_many :entries
   has_many :community_users
+  has_many :community,through: :community_users
   validates :profile, length: { maximum: 250 }
   mount_uploader :image, ImageUploader
   def following?(other_user)

@@ -6,8 +6,9 @@ class CommunitiesController < ApplicationController
   
   def show
     @community = Community.find(params[:id]) 
+    community =@community
     @community_user = CommunityUser.new
-    @community_users=CommunityUser.all
+    @community_users = community.users
   end
 
   def create

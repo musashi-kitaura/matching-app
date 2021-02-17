@@ -10,16 +10,14 @@
         = f.hidden_field :community_id, value: @community.id
         = f.hidden_field :user_id, value: current_user.id
         = f.submit '入会', class: 'communities-btn'
-      -# %input{type: "submit", value: "入会",class:'communities-btn'}  
-
     .main-matching
-      - @community.community_users.each |community_user| do
+      - @community.user.each |user| do
         .main-matching__content
           .main-matching__content--image
             = image_tag "https://navi.harinezumi.org/wp-content/uploads/kohari12.jpg"
           .main-matching__content--information
             %p.age 
-              = community_user.user.name
+
             %p.age 
               長崎
           .main-matching__content--word
