@@ -11,14 +11,15 @@
         = f.hidden_field :user_id, value: current_user.id
         = f.submit '入会', class: 'communities-btn'
     .main-matching
-      - @community.user.each |user| do
-        .main-matching__content
-          .main-matching__content--image
-            = image_tag "https://navi.harinezumi.org/wp-content/uploads/kohari12.jpg"
-          .main-matching__content--information
-            %p.age 
-
-            %p.age 
-              長崎
-          .main-matching__content--word
-            宜しくおねがいします。何もありません。
+      - @community.users.each do |user| 
+        = link_to user_path(user.id) do 
+          .main-matching__content
+            .main-matching__content--image
+              = image_tag "https://navi.harinezumi.org/wp-content/uploads/kohari12.jpg"
+            .main-matching__content--information
+              %p.age 
+                =user.nickname
+              %p.age 
+                長崎
+            .main-matching__content--word
+              宜しくおねがいします。何もありません。
