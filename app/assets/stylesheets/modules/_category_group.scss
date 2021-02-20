@@ -1,4 +1,8 @@
 .category{  
+  border-left: 1px solid #ebeced;
+  width: 920px;
+  overflow: scroll;
+  height: 100vh;
   .category-header{
     margin: 50px 24px 0px;
     &__name{
@@ -15,7 +19,7 @@
       height: 48px;
       background-color: aqua;
       color:black;
-      margin: 20px 0 0 190px ;
+      margin: 20px 0 0 280px ;
       font-size: 16px;
       border-radius: 100px;
       border-style: none;

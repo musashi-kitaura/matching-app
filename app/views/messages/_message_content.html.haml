@@ -15,29 +15,16 @@
         %ul.message-box-content-main__message-box-second
           %li.message-box-content-main__message-box-secound--main
             .message-content-second
-              = message.message  
+              = message.content
       -else  
         %ul.message-box-content-main__message-box
           %li.message-box-content-main__message-box--main
             .message-content
-              = message.message 
+              = message.content 
     
-        -# %ul.message-box-content-main__message-box-second
-        -#   %li.message-box-content-main__message-box-secound--main
-        -#     .message-content-second
-        -#       = message.message 
-    -# %ul.message-box-content-main__message-box
-    -#   %li.message-box-content-main__message-box--main
-    -#     .message-content
-    -#       おはようございます
-    
-    -# %ul.message-box-content-main__message-box-second
-    -#   %li.message-box-content-main__message-box-secound--main
-    -#     .message-content-second
-    -#       おはようございます
   .message-text
-    = form_with model: [@message] ,local: true do |f|
-      = f.text_field :message, class: 'message-text__main', placeholder: "メッセージを入力"
+    = form_with model: [@message] ,html: {class: "form"},local: true do |f| 
+      = f.text_field :content, class: 'message-text__main', placeholder: "メッセージを入力"
       = f.hidden_field :room_id, value: @room.id
       .message-text__submit-main
         = f.submit '送信', class: 'message-text__submit-main--submit'

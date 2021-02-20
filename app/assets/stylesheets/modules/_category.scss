@@ -1,7 +1,8 @@
 .wrapper{
   margin: 0 auto;
   width: 100%;
-  max-width: 1100px;
+  height: 100%;
+  max-width: 1160px;
   display: flex;
   
 }
@@ -16,10 +17,13 @@
     .communities-main__recommended-index{
       margin: 10px 0px;
       width: 100%;
+      display: flex;
+      flex-flow: row wrap;
       &--details{
         .communities-image{
-          width: 110px;
+          width: 105px;
           height: 110px;
+          margin: 0px 8px 16px;
           img{
             border-radius: 12px;
           }

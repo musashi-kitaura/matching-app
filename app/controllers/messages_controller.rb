@@ -3,16 +3,23 @@ class MessagesController < ApplicationController
     @users = current_user.matchers
   end
 
-  def show
-    @users = current_user.matchers 
-    @user = User.find(params[:id])
-    @message = Message.new
-  end  
+  # def show
+  #   @users = current_user.matchers 
+  #   @user = User.find(params[:id])
+  #   @message = Message.new
+  #   respond_to do |format|
+  #     format.html 
+  #     format.json
+  #   end  
+  # end  
 
   def create
     if Entry.where(:user_id => current_user.id, :room_id => params[:message][:room_id]).present?
-      @message = Message.create(params.require(:message).permit(:user_id, :message, :room_id).merge(:user_id => current_user.id))
-      redirect_to "/rooms/#{@message.room_id}"
+      @message = Message.create(params.require(:message).permit(:user_id, :content, :room_id).merge(:user_id => current_user.id))
+      respond_to do |format|
+        format.html{ redirect_to "/rooms/#{@message.room_id}" }
+        format.json
+      end 
     else
       redirect_back(fallback_location: root_path)
     end
@@ -28,6 +35,6 @@ class MessagesController < ApplicationController
   end  
   private
   def message_params
-    params.require(:message).permit(:message).merge(user_id: current_user.id)
+    params.require(:message).permit(:content).merge(user_id: current_user.id)
   end
 end

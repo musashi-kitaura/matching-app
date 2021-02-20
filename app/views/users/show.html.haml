@@ -7,12 +7,14 @@
       .image__first
         -if @user.image.present?
           = image_tag @user.image.url, width: '100%'
-      .how-nice
-        =form_with model: @relationship, local: true do |f|
-          %div= hidden_field_tag :following_id, @user.id
-          %button.how-nice__button{:type =>"submit"}
-            いいね
-            %i.fas.fa-heart 
+      - unless current_user.id
+      -else   
+        .how-nice
+          =form_with model: @relationship, local: true do |f|
+            %div= hidden_field_tag :following_id, @user.id
+            %button.how-nice__button{:type =>"submit"}
+              いいね
+              %i.fas.fa-heart 
       .profile-tweet
          
         = @user.tweet     

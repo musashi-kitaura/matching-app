@@ -3,25 +3,25 @@
     =image_tag "https://www.pairs.lv/wp-content/themes/pairs_pc/img/logo_pairs.png",class:"logo__image"
 
   .side-bar-main
-    = link_to "#", class: "side-bar-main__look-for" ,style:"display: block;"do
+    = link_to users_path, class: "side-bar-main__look-for" ,style:"display: block;"do
       = icon('fas', 'binoculars')
       さがす
-    = link_to "#", class: "side-bar-main__community",style:"display: block;" do
+    = link_to communities_path, class: "side-bar-main__community",style:"display: block;" do
       = icon('fas', 'binoculars')
       コミュニティー
     = link_to "#", class: "side-bar-main__how-nice" ,style:"display: block;"do
       = icon('fas', 'binoculars')
       お相手から
-    = link_to "/messages", class: "side-bar-main__message" ,style:"display: block;"do
+    = link_to messages_path, class: "side-bar-main__message" ,style:"display: block;"do
       = icon('fas', 'binoculars')
       メッセージ
-    = link_to "#", class: "side-bar-main__profile" ,style:"display: block;"do
+    = link_to user_path(current_user.id), class: "side-bar-main__profile" ,style:"display: block;"do
       = icon('fas', 'binoculars')
       プロフィール
     = link_to "#", class: "side-bar-main__footprints",style:"display: block;"do
       = icon('fas', 'binoculars')
       あしあと
-    = link_to "#", class: "side-bar-main__other",style:"display: block;" do
+    = link_to edit_user_path(current_user.id), class: "side-bar-main__other",style:"display: block;" do
       = icon('fas', 'binoculars')
       その他
     

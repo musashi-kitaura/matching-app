@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   resources :communities, only: [:index, :show, :create] 
   resources :relationships, only: [:index,:create, :destroy,]
   resources :categories, only: [:show] 
-  resources :rooms, only: [:index, :create, :show]  
+  resources :rooms, only: [:create, :show]  
   resources :messages, only: [:index,:create]
   resources :community_users, only: [:create] 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

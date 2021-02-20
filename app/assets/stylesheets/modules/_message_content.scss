@@ -38,7 +38,7 @@
     }
   }
   .message-box-content-main{
-    
+    overflow: scroll;
     &__message-box{
       margin-top: 24px;
       padding: 0px 16px;
