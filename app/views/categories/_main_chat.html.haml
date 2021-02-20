@@ -3,12 +3,12 @@
     さがす
   %input.search-box__text{:type => "text" }
     = icon('fas', 'binoculars fa-2x')
-  .main-matching
+  .main-matching 
     - @users.each do |user|
       .main-matching__content
         =link_to user_path(user.id) do
           .main-matching__content--image
-            = image_tag "https://navi.harinezumi.org/wp-content/uploads/kohari12.jpg"
+            = image_tag "https://navi.harinezumi.org/wp-content/uploads/kohari12.jpg" ,width: '100%',height: '100%'
 
           .main-matching__content--information
             %p.age 
@@ -17,7 +17,7 @@
               長崎
           .main-matching__content--word
             宜しくおねがいします。何もありません。
-  
+
     -# .main-matching__content
     -#   .main-matching__content--image
     -#     = image_tag "https://navi.harinezumi.org/wp-content/uploads/kohari12.jpg"

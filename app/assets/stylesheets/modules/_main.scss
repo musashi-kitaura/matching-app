@@ -1,7 +1,8 @@
 .search-box{
-  border-left: 1px solid gray;
+  border-left: 1px solid #ebeced;
   width: 920px;
   padding-top: 20px;
+  height: 100vh;
   overflow: scroll;
   &__feature{
     font-size: 28px;
@@ -18,9 +19,10 @@
     display: flex;
     padding: 40px 40px;
     overflow-wrap: break-word;
+    flex-flow: row wrap;
     &__content{
-      width: 20%;
-      height: 150px;
+      width: 160px;
+      height: 220px;
       &--image{
         img{
           background-color: rgb(248, 249, 249);

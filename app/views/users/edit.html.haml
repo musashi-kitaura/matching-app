@@ -1,33 +1,34 @@
 .wrapper
   = render "categories/side_bar"
-  = form_for(current_user) do |f|
-    //アイコン追加部分
-    .profile-heder
-    .profile-main 
-      %label.profile-main__image--icon__label
-        .profile-main__image--icon__input
-          - if @image.present?
-            = image_tag @image.url,class: 'profile-main__image--icon__input__image', width: '100%'
-          .profile-main__image--icon__input__image2
-          = f.file_field :image, class: "profile-main__image--icon__input__btn", id: 'upload-icon'
-      .profile-main__name    
-        武蔵
-    .line   
-    .tweet-main
-      .tweet-main__icon
-        つぶやき
-      .tweet-main__text
-        = f.text_area :tweet
+  .profile
+    = form_for(current_user) do |f|
+      //アイコン追加部分
+      .profile-heder
+      .profile-main 
+        %label.profile-main__image--icon__label
+          .profile-main__image--icon__input
+            - if @image.present?
+              = image_tag @image.url,class: 'profile-main__image--icon__input__image', width: '100%'
+            .profile-main__image--icon__input__image2
+            = f.file_field :image, class: "profile-main__image--icon__input__btn", id: 'upload-icon'
+        .profile-main__name    
+          武蔵
+      .line   
+      .tweet-main
+        .tweet-main__icon
+          つぶやき
+        .tweet-main__text
+          = f.text_area :tweet
 
-    .line
-       
-    .profile-main__user-profile
-      .field
-        .field-label
-          自己紹介
-        .field-input
-          = f.text_area :profile, autocomplete: 'off'
+      .line
+        
+      .profile-main__user-profile
+        .field
+          .field-label
+            自己紹介
+          .field-input
+            = f.text_area :profile, autocomplete: 'off'
 
-    .line    
-    .actions
-      =f.submit "編集" ,class: "actions-name"
+      .line    
+      .actions
+        =f.submit "編集" ,class: "actions-name"
