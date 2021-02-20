@@ -1,10 +1,8 @@
 .message{
   width: 30%;
-  height: 100%; 
+  height: 100vh;
   border-right: 1px solid rgb(235, 236, 237);
   height: 850px;;
-  overflow: scroll;
-  height: 100vh;
   .message-header{
     &__top{
       font-size: 28px;
@@ -43,6 +41,9 @@
         span{
           gap: 8px;
         }
+      }
+      .room-form{
+        display: none;
       }
 
     }

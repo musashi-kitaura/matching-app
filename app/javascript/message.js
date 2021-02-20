@@ -32,6 +32,7 @@ $(function(){
       $('.form')[0].reset();
       // $('.message-box-content-main').animate({ scrollTop: $('.message-box-content-main')[0].scrollHeight });
       $('.message-text__submit-main--submit').prop('disabled', false);
+      $('.message-box-content-main').animate({ scrollTop: $('.message-box-content-main')[0].scrollHeight });
     })
     .fail(function () {
       alert('error');
