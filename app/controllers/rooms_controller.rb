@@ -12,6 +12,7 @@ class RoomsController < ApplicationController
 
   def show  
     @room = Room.find_by(id: params[:id])
+    @users = current_user.matchers
     @room_user = @room.entries.where.not(user_id: current_user.id).first.user
     @messages = Message.where(room: @room).order(:created_at)
     @message = Message.new
