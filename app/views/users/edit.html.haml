@@ -9,10 +9,12 @@
           .profile-main__image--icon__input
             - if @image.present?
               = image_tag @image.url,class: 'profile-main__image--icon__input__image', width: '100%'
+            - else 
+              = image_tag "default", class: 'profile-main__image--icon__input__image',width: '100%' ,height: '100%'
             .profile-main__image--icon__input__image2
             = f.file_field :image, class: "profile-main__image--icon__input__btn", id: 'upload-icon'
         .profile-main__name    
-          武蔵
+          = @user.nickname
       .line   
       .tweet-main
         .tweet-main__icon

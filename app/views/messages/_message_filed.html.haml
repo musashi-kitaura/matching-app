@@ -6,9 +6,12 @@
       やりとり中
   .message-main 
     - @users.each do |user|
-      .message-main__content
-        = image_tag "https://navi.harinezumi.org/wp-content/uploads/kohari12.jpg",class:"message-main__content--image"
-        %label 
+      %label 
+        .message-main__content
+          - if user.image.present?
+            = image_tag user.image.url,class:"message-main__content--image"
+          - else   
+            = image_tag "default.jpeg",class:"message-main__content--image"
           .message-main__content--box
             %span
               = user.nickname
