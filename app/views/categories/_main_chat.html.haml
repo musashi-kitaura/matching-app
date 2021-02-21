@@ -8,8 +8,10 @@
       .main-matching__content
         =link_to user_path(user.id) do
           .main-matching__content--image
-            = image_tag "https://navi.harinezumi.org/wp-content/uploads/kohari12.jpg" ,width: '100%',height: '100%'
-
+            - if user.image.present?
+              = image_tag user.image.url width: '100%',height: '100%'
+            - else 
+              = image_tag "default"
           .main-matching__content--information
             %p.age 
               = user.nickname
@@ -17,53 +19,3 @@
               長崎
           .main-matching__content--word
             宜しくおねがいします。何もありません。
-
-    -# .main-matching__content
-    -#   .main-matching__content--image
-    -#     = image_tag "https://navi.harinezumi.org/wp-content/uploads/kohari12.jpg"
-    -#   .main-matching__content--information
-    -#     %p.age 
-    -#       30歳 
-    -#     %p.age 
-    -#       長崎
-    -#   .main-matching__content--word
-    -#     宜しくおねがいします。何もありません。
-    
-    -# .main-matching__content
-    -#   .main-matching__content--image
-    -#     = image_tag "https://navi.harinezumi.org/wp-content/uploads/kohari12.jpg"
-    -#   .main-matching__content--information
-    -#     %p.age 
-    -#       30歳 
-          
-    -#     %p.age 
-    -#       長崎
-    -#   .main-matching__content--word
-    -#     宜しくおねがいします。何もありません。
-
-    -# .main-matching__content
-    -#   .main-matching__content--image
-    -#     = image_tag "https://navi.harinezumi.org/wp-content/uploads/kohari12.jpg"
-    -#   .main-matching__content--information
-    -#     %p.age 
-    -#       30歳 
-          
-    -#     %p.age 
-    -#       長崎
-    -#   .main-matching__content--word
-    -#     宜しくおねがいします。何もありません。    
-
-
-    -# .main-matching__content
-    -#   .main-matching__content--image
-    -#     = image_tag "https://navi.harinezumi.org/wp-content/uploads/kohari12.jpg"
-    -#   .main-matching__content--information
-    -#     %p.age 
-    -#       30歳 
-          
-    -#     %p.age 
-    -#       長崎
-    -#   .main-matching__content--word
-    -#     宜しくおねがいします。何もありません。
- 
-

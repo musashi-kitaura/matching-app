@@ -37,8 +37,11 @@ Things you may want to cover:
 - has_many :followers
 - has_many :messages
 - has_many :rooms
+- has_many :entries
+- has_many :community_users
+-  has_many :community,through: :community_users
 
-## room テーブル
+## roomsテーブル
 
 ### Association
 - has_many :entries
@@ -55,11 +58,11 @@ Things you may want to cover:
 - belongs_to :follower
 - belongs_to :following
 
-## messageテーブル
+## messagesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|message|text|null: false|
+|content|text|null: false|
 |user|references||
 |room|references||
 
@@ -68,7 +71,7 @@ Things you may want to cover:
 - belongs_to :room
 
 
-## entryテーブル
+## entriesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -78,3 +81,38 @@ Things you may want to cover:
 ### Association
 - belongs_to :user
 - belongs_to :room
+
+## communitiesテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|name|string||
+|image|string||
+|category|references||
+
+
+### Association
+- has_many :community_users
+- has_many :users,through: :community_users
+- belongs_to :category,optional: true
+
+## community_usersテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|user|references||
+|community|references||
+
+### Association
+- belongs_to :user
+- belongs_to :community
+
+## categoriesテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|name|strin||
+|image|strin||
+
+### Association
+- has_many :communities
