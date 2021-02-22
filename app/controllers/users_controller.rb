@@ -19,9 +19,8 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @relationship = Relationship.new
   end
- 
+  
   private
-
   def user_params
     params.require(:user).permit(:id, :nickname, :email, :image, :profile, :tweet)
   end   
