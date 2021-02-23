@@ -8,7 +8,7 @@
         -if @user.image.present?
           = image_tag @user.image.url, width: '100%'
         -else 
-          = image_tag "catch.jpg"
+          = image_tag "default.jpg"
       - if user_signed_in? == @user_id
       - else
         .how-nice

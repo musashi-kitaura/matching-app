@@ -11,7 +11,7 @@
           - if user.image.present?
             = image_tag user.image.url,class:"message-main__content--image"
           - else   
-            = image_tag "catch.jpg",class:"message-main__content--image"
+            = image_tag "default.jpg",class:"message-main__content--image"
           .message-main__content--box
             %span
               = user.nickname

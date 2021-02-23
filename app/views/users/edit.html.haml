@@ -10,7 +10,7 @@
             - if @image.present?
               = image_tag @image.url,class: 'profile-main__image--icon__input__image', width: '100%'
             - else 
-              = image_tag "catch.jpg", class: 'profile-main__image--icon__input__image',width: '100%' ,height: '100%'
+              = image_tag "default.jpeg", class: 'profile-main__image--icon__input__image',width: '100%' ,height: '100%'
             .profile-main__image--icon__input__image2
             = f.file_field :image, class: "profile-main__image--icon__input__btn", id: 'upload-icon'
         .profile-main__name    
