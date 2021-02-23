@@ -8,7 +8,7 @@
         %label.profile-main__image--icon__label
           .profile-main__image--icon__input
             - if @image.present?
-              -# = image_tag @image.url,class: 'profile-main__image--icon__input__image', width: '100%'
+              = image_tag @image.url,class: 'profile-main__image--icon__input__image', width: '100%'
             - else 
               = image_tag "default", class: 'profile-main__image--icon__input__image',width: '100%' ,height: '100%'
             .profile-main__image--icon__input__image2
