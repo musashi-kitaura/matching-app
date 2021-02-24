@@ -26,7 +26,7 @@ class User < ApplicationRecord
     following_relationships.find_by(following_id: other_user.id).destroy
   end
 
-友達判定
+# 友達判定
   def matchers
     followings & followers
   end
