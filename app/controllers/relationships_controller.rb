@@ -3,10 +3,8 @@ class RelationshipsController < ApplicationController
     @users = current_user.matchers
   end  
   def create
-    reaction = Relationship.find_or_initialize_by(follower_id:params[:user_id], following_id: current_user.id)
-    reaction.update_attributes(
-      status: params[:reaction]
-    )
+    current_user.following_relationships.create(create_params)
+    redirect_to root_path
   end
   
   def destroy
