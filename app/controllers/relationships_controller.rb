@@ -5,7 +5,6 @@ class RelationshipsController < ApplicationController
   def create
     current_user.following_relationships.create(create_params)
     redirect_to root_path
-    #kakkaka
   end
   
   def destroy
