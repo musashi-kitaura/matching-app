@@ -61,7 +61,7 @@ http://54.178.85.231/
 プロフィールにはつぶやきや自己紹介が表示されています。
 
 ## プロフィール編集
-![プロフィール編集](https://github.com/musashi-kitaura/matching-app/blob/master/c8f0e2001ba181f7664e612a11354af4%20(1).png)
+![プロフィール編集](https://github.com/musashi-kitaura/matching-app/blob/master/463eeeddb04395e2d13e8f4ef9bcb822.png)
 つぶやきや自己紹介、プロフィール画像を編集することができます。
 
 
