@@ -22,7 +22,14 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
-
+#アプリ名						
+#概要(このアプリでできることを書いて下さい)						
+#本番環境(デプロイ先　テストアカウント＆ID)						
+#制作背景(意図)											
+#工夫したポイント						
+#使用技術(開発環境)						
+#課題や今後実装したい機能						
+#DB設計						
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
