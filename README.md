@@ -22,6 +22,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
 # アプリ名	
 マッチングアプリ
 
@@ -53,26 +54,47 @@ http://54.178.85.231/
 
 ## トップ画像
 ![トップ画像](https://github.com/musashi-kitaura/matching-app/blob/master/image.png)
+マイページを押すと、自分のアカウントのユーザーページに移動します。
 
 ## プロフィール表示
-![プロフィール](https://github.com/musashi-kitaura/matching-app/blob/master/image.png)
-
+![プロフィール](https://github.com/musashi-kitaura/matching-app/blob/master/d0f512d9360b9074f55b639308191aa6.png)
+プロフィールにはつぶやきや自己紹介が表示されています。
 
 ## プロフィール編集
-![プロフィール編集](https://github.com/musashi-kitaura/matching-app/blob/master/image.png)
+![プロフィール編集](https://github.com/musashi-kitaura/matching-app/blob/master/c8f0e2001ba181f7664e612a11354af4%20(1).png)
+つぶやきや自己紹介、プロフィール画像を編集することができます。
+
+
 
 ## 登録されたユーザー表示
-![登録されたユーザーの表示](https://github.com/musashi-kitaura/matching-app/blob/master/image.png)
+![登録されたユーザーの表示](https://github.com/musashi-kitaura/matching-app/blob/master/d0f512d9360b9074f55b639308191aa6.png)
+探すを押すと登録されたuserが表示されます。
+
+
+
+## マッチング機能・メッセージ機能
+![マッチング機能](https://github.com/musashi-kitaura/matching-app/blob/master/image.png)
+お互いのユーザー同士いいねボタンを押すとマッチングします。マッチングできた相手は、メッセージのやり取りをすることできます。
 
 
 ## コミュニティーやカテゴリーを表示
-![コミュニティーやカテゴリーを表示](https://github.com/musashi-kitaura/matching-app/blob/master/image.png)
+![コミュニティーやカテゴリーを表示](https://github.com/musashi-kitaura/matching-app/blob/master/a4f48f1ba9b734958fcd49f3c6489d66.png)
+![コミュニティーやカテゴリーを表示](https://github.com/musashi-kitaura/matching-app/blob/master/b7ab6305c22421fecb3a08074fb34fa2.jpg)
+コミュニティーは好きなジャンルゲームの人とマッチングしやすくする機能です。
+カテゴリーは、コミュニティーの種類を一つにまとめたものです。
+
 
 ## ログアウト
-
+![ログアウト](https://github.com/musashi-kitaura/matching-app/blob/master/image.png)
 
 
 # 実装予定の内容
+・メッセージの自動更新機能
+・トップページのデザイン修正
+・ロゴの修正
+・いいねを押した時に非同期で済みと表示される
+・ログインしたユーザーをユーザー一覧に表示させない
+
 
 # DB設計						
 
