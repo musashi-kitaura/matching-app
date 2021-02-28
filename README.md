@@ -46,14 +46,33 @@ http://54.178.85.231/
 ゲームプレイヤーのマッチングアプリを作りました。作成背景として、やりたいゲームを友達がしていない場合、一緒にプレーすることがない経験があります。そうなると、ゲーム攻略や素材集めなど時間がかかります。一緒にプレーしてくれる人を探す問題を解決するためこのアプリを作りました。アプリを使用し好きなゲームの人同士でマッチングして一緒にゲームを楽しみプレーするのが目的です。
 
 # DEMO
-![アカウント作成](https://github.com/musashi-kitaura/matching-app/blob/master/image.png)
+## ユーザー登録
+![ユーザー登録](https://github.com/musashi-kitaura/matching-app/blob/master/user.png)
+ユーザー名とEメール、パスワードを入力し登録ボタンを押すとユーザー登録を行うことができます。
 
 
-# 工夫したポイント						
+## トップ画像
+![トップ画像](https://github.com/musashi-kitaura/matching-app/blob/master/image.png)
 
-# 使用技術(開発環境)				
+## プロフィール表示
+![プロフィール](https://github.com/musashi-kitaura/matching-app/blob/master/image.png)
 
-# 課題や今後実装したい機能			
+
+## プロフィール編集
+![プロフィール編集](https://github.com/musashi-kitaura/matching-app/blob/master/image.png)
+
+## 登録されたユーザー表示
+![登録されたユーザーの表示](https://github.com/musashi-kitaura/matching-app/blob/master/image.png)
+
+
+## コミュニティーやカテゴリーを表示
+![コミュニティーやカテゴリーを表示](https://github.com/musashi-kitaura/matching-app/blob/master/image.png)
+
+## ログアウト
+
+
+
+# 実装予定の内容
 
 # DB設計						
 
